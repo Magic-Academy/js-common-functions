@@ -6,7 +6,7 @@ test/
 .npmignore
 test.js
 .DS_Store
-dist/
+src/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
