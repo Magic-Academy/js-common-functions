@@ -1,10 +1,12 @@
 name: NPM Publish 
 
 on:
-  push:
-    branches: [release]
   pull_request:
-    branches: [release]
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
