@@ -1,12 +1,11 @@
 {
     "name": "js-common-functions",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
-        "dist",
-        "src"
+        "dist"
     ],
     "engines": {
         "node": ">=10"
