@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 松岛川树
+ * @Date: 2021-12-05 19:19:37
+ * @LastEditors: 松岛川树
+ * @LastEditTime: 2021-12-09 14:07:19
+ * @FilePath: \js-common-functions\README.JA.md
+-->
 # js-common-functions
 
 は、JavaScriptのコードを書く際に便利な関数を提供します。
@@ -49,5 +58,8 @@ console.log(deepClone({a: 1, b: {c: 2}})); // {a: 1, b: {c: 2}}
 * filterHTML  - **HTMLタグを除去する**
 * isFloat  - **浮動小数点数かどうかを返す**
 * isInteger  - **整数かどうかを返す**
+* stringifyQueryString - **クエリストリングを文字列に変換する**
+* getScrollTop - **スクロール位置を返す**
+* windowResize - **ウィンドウサイズを返す**
 
 質問があれば提出してください[issue](https://github.com/Magic-Academy/js-common-functions/issues/new) :)

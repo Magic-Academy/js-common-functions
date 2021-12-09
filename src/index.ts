@@ -2,24 +2,38 @@
  * @name:Deep copy
  * @param {Object} obj Objects to copy
  */
-export function deepClone<T>(obj: T): T {
-  let result: any;
-  if (typeof obj === 'object') {
-    if (Array.isArray(obj)) {
-      result = [];
-      for (let i = 0; i < obj.length; i++) {
-        result.push(deepClone(obj[i]));
-      }
-    } else {
-      result = {};
-      for (let key in obj) {
-        result[key] = deepClone(obj[key]);
-      }
-    }
-  } else {
-    result = obj;
+export function deepClone(values: any): any {
+  var copy;
+
+  // Handle the 3 simple types, and null or undefined
+  if (null == values || "object" != typeof values) return values;
+
+  // Handle Date
+  if (values instanceof Date) {
+    copy = new Date();
+    copy.setTime(values.getTime());
+    return copy;
   }
-  return result;
+
+  // Handle Array
+  if (values instanceof Array) {
+    copy = [];
+    for (var i = 0, len = values.length; i < len; i++) {
+      copy[i] = deepClone(values[i]);
+    }
+    return copy;
+  }
+
+  // Handle Object
+  if (values instanceof Object) {
+    copy = {} as any;
+    for (var attr in values) {
+      if (values.hasOwnProperty(attr)) copy[attr] = deepClone(values[attr]);
+    }
+    return copy;
+  }
+
+  throw new Error("Unable to copy values! Its type isn't supported.");
 }
 
 /**
@@ -379,4 +393,59 @@ export function isFloat(val: any) {
  */
 export function isInteger(val: any) {
   return /^\d+$/.test(val)
+}
+
+/**
+* @name: Object serialization
+* @param  {Object} obj 
+* @return {String}
+*/
+export function stringifyQueryString(obj: any): string {
+  if (!obj) return '';
+  var pairs = [];
+
+  for (var key in obj) {
+    var value = obj[key];
+
+    if (value instanceof Array) {
+      for (var i = 0; i < value.length; ++i) {
+        pairs.push(encodeURIComponent(key + '[' + i + ']') + '=' + encodeURIComponent(value[i]));
+      }
+      continue;
+    }
+
+    pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+  }
+
+  return pairs.join('&');
+}
+
+/**
+ * @desc Get the distance from the top of the scroll bar
+ */
+export function getScrollTop(): number {
+  return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+}
+
+/**
+ * 
+ * @desc H5 soft keyboard is retracted, bounce back
+ * When the software keyboard pops up will change the current Window.innerHeight, monitor this value change
+ * @param {Function} downCb When the soft keyboard bounces, the retracted callback
+ * @param {Function} upCb When the soft keyboard bounces
+ */
+
+export function windowResize(downCb: Function, upCb: Function): void {
+  var clientHeight = window.innerHeight;
+  downCb = typeof downCb === 'function' ? downCb : function () { }
+  upCb = typeof upCb === 'function' ? upCb : function () { }
+  window.addEventListener('resize', () => {
+    var height = window.innerHeight;
+    if (height === clientHeight) {
+      downCb();
+    }
+    if (height < clientHeight) {
+      upCb();
+    }
+  });
 }

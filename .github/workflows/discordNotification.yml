@@ -1,0 +1,24 @@
+name: Notification on push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: 松岛川树的秘书
+          DISCORD_AVATAR: https://avatars.githubusercontent.com/u/81367559?v=4
+        uses: Ilshidur/action-discord@master
+        with:
+          args: "There is a new push. Click to view it 👇"
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master

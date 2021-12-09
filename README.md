@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 松岛川树
+ * @Date: 2021-12-05 16:24:15
+ * @LastEditors: 松岛川树
+ * @LastEditTime: 2021-12-09 14:05:03
+ * @FilePath: \js-common-functions\README.md
+-->
 # js-common-functions
 
 [![GitHub stars](https://img.shields.io/github/stars/Magic-Academy/js-common-functions)](https://github.com/Magic-Academy/js-common-functions/stargazers)
@@ -47,5 +56,8 @@ console.log(deepClone({a: 1, b: {c: 2}})); // {a: 1, b: {c: 2}}
 * filterHTML
 * isFloat
 * isInteger
+* stringifyQueryString
+* getScrollTop
+* windowResize
 
 If in doubt, please submit[issues](https://github.com/Magic-Academy/js-common-functions/issues/new) :)

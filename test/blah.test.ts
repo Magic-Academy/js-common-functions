@@ -1,3 +1,12 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: 松岛川树
+ * @Date: 2021-12-05 16:24:15
+ * @LastEditors: 松岛川树
+ * @LastEditTime: 2021-12-09 14:05:54
+ * @FilePath: \js-common-functions\test\blah.test.ts
+ */
 import {
   deepClone,
   shallowClone,
@@ -12,7 +21,8 @@ import {
   trim,
   filterHTML,
   isFloat,
-  isInteger
+  isInteger,
+  stringifyQueryString
 } from '../src';
 
 describe('blah', () => {
@@ -80,4 +90,7 @@ describe('blah', () => {
     expect(isInteger('123.45')).toEqual(false);
   });
 
+  it('stringifyQueryString', () => {
+    expect(stringifyQueryString({ a: 1, b: 2 })).toEqual('a=1&b=2');
+  });
 });

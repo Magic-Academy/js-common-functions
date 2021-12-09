@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 松岛川树
+ * @Date: 2021-12-05 19:07:27
+ * @LastEditors: 松岛川树
+ * @LastEditTime: 2021-12-09 14:03:58
+ * @FilePath: \js-common-functions\README.ZH_CN.md
+-->
 # js-common-functions
 
 js工具函数
@@ -49,6 +58,8 @@ console.log(deepClone({a: 1, b: {c: 2}})); // {a: 1, b: {c: 2}}
 * filterHTML - **过滤html标签**
 * isFloat - **判断是否为浮点数**
 * isInteger - **判断是否为整数**
-
+* stringifyQueryString - **将对象转换为查询字符串**
+* getScrollTop - **获取滚动条高度**
+* windowResize - **窗口大小改变**
 
 如有疑问，请提交[issues](https://github.com/Magic-Academy/js-common-functions/issues/new) :)
