@@ -22,7 +22,8 @@
     "homepage": "https://github.com/Magic-Academy/js-common-functions#readme",
     "scripts": {
         "start": "tsdx watch",
-        "build": "tsdx build && jsdoc -c jsdoc.json",
+        "build": "tsdx build",
+        "docs": "jsdoc -c jsdoc.json",
         "test": "tsdx test",
         "lint": "tsdx lint",
         "prepare": "tsdx build",
