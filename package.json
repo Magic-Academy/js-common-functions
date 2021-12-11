@@ -1,6 +1,6 @@
 {
     "name": "js-common-functions",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/Magic-Academy/js-common-functions/issues"
     },
-    "homepage": "https://github.com/Magic-Academy/js-common-functions#readme",
+    "homepage": "https://magic-academy.github.io/js-common-functions/",
     "scripts": {
         "start": "tsdx watch",
         "build": "tsdx build",
