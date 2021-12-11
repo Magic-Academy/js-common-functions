@@ -1,0 +1,51 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+            "./src"
+        ],
+        "includePattern": "\\.(vue|js|ts|jsx|tsx)$"
+    },
+    "plugins": [
+        "node_modules/better-docs/typescript",
+        "better-docs/component",
+        "better-docs/category",
+        "plugins/markdown"
+    ],
+    "opts": {
+        "encoding": "utf8",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "readme": "./README.md",
+        "template": "node_modules/better-docs"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "better-docs": {
+            "name": "js-common-functions",
+            "title": "js-common-functions",
+            "trackingCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"https://www.songdaochuanshu.com/favicon.ico\" />\",",
+            "hideGenerator": false,
+            "component": {
+                "entry": [
+                    " import ' babel-polyfill'; ",
+                    " import 'bulma/css/bulma.css'; "
+                ]
+            },
+            "navLinks": [{
+                    "label": "Github",
+                    "href": "https://github.com/Magic-Academy/js-common-functions"
+                },
+                {
+                    "label": "Friendship Link",
+                    "href": "https://github.com/Magic-Academy"
+                }
+            ]
+        },
+        "search": true
+    }
+}

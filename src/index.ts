@@ -1,6 +1,7 @@
 /** 
  * @name:Deep copy
  * @param {Object} obj Objects to copy
+ * @returns {Object} Deep copy of the object
  */
 export function deepClone(values: any): any {
   var copy;
@@ -37,6 +38,7 @@ export function deepClone(values: any): any {
 }
 
 /**
+ *@function 
 * @name: Shallow copy
 * @param {Object} obj Objects to copy
 */
@@ -113,7 +115,7 @@ export function timeFormat(time: any): any {
 * @param {String} url Request address 
 * @param {Object} data Request parameters 
 * @param {String} method Request way get/post
-* @returns
+* @returns {Promise}
 */
 export function ajax({ url, data, method = "GET" }: { url: string, data: any, method: string }): Promise<any> {
   return new Promise((resolve, reject) => {
@@ -193,6 +195,7 @@ export function sortBy(arr: any[], key: string, order: string = 'asc') {
 }
 
 /**
+* @function 
 * @name: Random verification code
 * @param {Number} len Verification code length
 */
