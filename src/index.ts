@@ -1,4 +1,5 @@
 /** 
+ *@function 
  * @name:Deep copy
  * @param {Object} obj Objects to copy
  * @returns {Object} Deep copy of the object
@@ -38,9 +39,9 @@ export function deepClone(values: any): any {
 }
 
 /**
- *@function 
 * @name: Shallow copy
 * @param {Object} obj Objects to copy
+* @returns {Object} Shallow copy of the object
 */
 export function shallowClone<T>(obj: T): T {
   let result: any;
@@ -77,7 +78,9 @@ export function getObjectLength(obj: object): number {
 /**
 * @name: Time format X days ago
 * @param {*} time Timestamp
-* @return {*}
+* @return {*} Time format X days ago
+* @example
+* console.log(timeFormat(1588888888)); // 2 days ago
 */
 export function timeFormat(time: any): any {
   let result;
@@ -151,6 +154,9 @@ export function isContain(arr: any[], value: any) {
 /** 
 * @name: Array to heavy
 * @param {Array} arr Array to be heavy
+* @returns {Array} 
+* @example
+* console.log(unique([1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10])) // [1,2,3,4,5,6,7,8,9,10]
 */
 export function unique(arr: any[]) {
   let result: any[] = [];
@@ -164,6 +170,9 @@ export function unique(arr: any[]) {
 
 /**
 * @name: Generate random colors
+* @return {String} Random color
+* @example
+* console.log(randomColor()) // #e6e6e6
 */
 export function randomColor() {
   return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
@@ -195,7 +204,6 @@ export function sortBy(arr: any[], key: string, order: string = 'asc') {
 }
 
 /**
-* @function 
 * @name: Random verification code
 * @param {Number} len Verification code length
 */
@@ -210,6 +218,7 @@ export function randomCode(len: number) {
 /**
 * @name: Password verification regular
 * @param {String} password password
+* @returns {Boolean}
 */
 export function checkPassword(password: string) {
   let reg = /^[a-zA-Z0-9]{6,20}$/;
@@ -219,6 +228,7 @@ export function checkPassword(password: string) {
 /**
 * @name: Regular verification mailbox
 * @param {String} email Mail
+* @returns {Boolean}
 */
 export function checkEmail(email: string) {
   let reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
@@ -229,6 +239,7 @@ export function checkEmail(email: string) {
 * @name: Regular verification mobile phone number
 * @param {String} phone phone number
 * @param {Boolean} isChina Is it a Chinese mobile phone number?
+* @returns {Boolean}
 */
 export function checkPhone(phone: string, isChina: boolean = true) {
   let reg = isChina ? /^1[3-9]\d{9}$/ : /^[0-9]{8,15}$/;
@@ -238,6 +249,7 @@ export function checkPhone(phone: string, isChina: boolean = true) {
 /**
 * @name: Regular verification ID card number
 * @param {String} idCard ID number
+* @returns {Boolean}
 */
 export function checkIdCard(idCard: string) {
   let reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
@@ -247,6 +259,7 @@ export function checkIdCard(idCard: string) {
 /**
 * @name: Regular verification bank card number
 * @param {String} bankCard Bank card number
+* @returns {Boolean} 
 */
 export function checkBankCard(bankCard: string) {
   let reg = /^(\d{16}|\d{19})$/;
@@ -303,6 +316,7 @@ interface setting {
 * @name: Package FETCH request
 * @param {string} url Request address
 * @param {string} setting Request configuration
+* @return {Promise} Request promise
 */
 export function fetch(url: string, setting: setting) { // FETCH request package
   let opts = { // Set the initial value of the parameter
@@ -339,7 +353,10 @@ export function fetch(url: string, setting: setting) { // FETCH request package
   })
 }
 
-//Determine if it is a PC
+/**
+ * @name: Determine if it is a PC
+ * @return {Boolean} true or false
+ */
 export function isPC() { // Is it a PC side?
   let userAgentInfo = navigator.userAgent
   let Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
@@ -357,6 +374,7 @@ export function isPC() { // Is it a PC side?
 * @name: Remove string spaces
 * @param {string} str String
 * @param {string} type Type 1: All space type 2: front and rear space type 3: Front space type 4: rear
+* @returns {string} String
 */
 export function trim(str: string, type: number) {
   type = type || 1
@@ -377,6 +395,7 @@ export function trim(str: string, type: number) {
 /**
 * @name: Filter HTML code
 * @param {string} str String
+* @return {string} String
 */
 export function filterHTML(str: string) {
   return str.replace(/<\/?[^>]*>/g, '').replace(/[ | ]*\n/g, '\n').replace(/\n[\s| | ]*\r/g, '\n').replace(/&nbsp;/ig, '')
@@ -385,6 +404,7 @@ export function filterHTML(str: string) {
 /**
 * @name: Judging whether it is a floating point number 
 * @param {any} val 
+* @return {boolean} 
 */
 export function isFloat(val: any) {
   return /^\d+\.\d+$/.test(val)
@@ -393,6 +413,7 @@ export function isFloat(val: any) {
 /**
  * @name: Judgment is an integer
  * @param {any} val 
+ * @return {boolean}
  */
 export function isInteger(val: any) {
   return /^\d+$/.test(val)
@@ -425,6 +446,7 @@ export function stringifyQueryString(obj: any): string {
 
 /**
  * @desc Get the distance from the top of the scroll bar
+ * @return {Number} The distance from the top of the scroll bar
  */
 export function getScrollTop(): number {
   return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
@@ -436,6 +458,7 @@ export function getScrollTop(): number {
  * When the software keyboard pops up will change the current Window.innerHeight, monitor this value change
  * @param {Function} downCb When the soft keyboard bounces, the retracted callback
  * @param {Function} upCb When the soft keyboard bounces
+ * @return {Function} 
  */
 
 export function windowResize(downCb: Function, upCb: Function): void {
