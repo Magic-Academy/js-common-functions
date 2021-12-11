@@ -24,7 +24,7 @@ jobs:
 
       - name: Docs 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          npm run docs
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -35,4 +35,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/
-          BUILD_SCRIPT: npm install && npm run docs
+          BUILD_SCRIPT: npm install && npm run build

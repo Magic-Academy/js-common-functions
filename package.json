@@ -1,6 +1,6 @@
 {
     "name": "js-common-functions",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -22,10 +22,9 @@
     "homepage": "https://github.com/Magic-Academy/js-common-functions#readme",
     "scripts": {
         "start": "tsdx watch",
-        "build": "tsdx build",
+        "build": "tsdx build && ./node_modules/.bin/jsdoc -c jsdoc.json",
         "test": "tsdx test",
         "lint": "tsdx lint",
-        "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
         "prepare": "tsdx build",
         "size": "size-limit",
         "analyze": "size-limit --why"
