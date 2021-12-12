@@ -3,7 +3,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Magic-Academy/js-common-functions)](https://github.com/Magic-Academy/js-common-functions/stargazers)
 [![GitHub license](https://img.shields.io/github/license/Magic-Academy/js-common-functions)](https://github.com/Magic-Academy/js-common-functions/blob/master/LICENSE)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/js-common-functions.svg)](https://openbase.io/js/js-common-functions?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
-
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/js-common-functions/badge?style=rounded)](https://www.jsdelivr.com/package/npm/js-common-functions)
 [![NPM](https://nodei.co/npm/js-common-functions.png)](https://nodei.co/npm/js-common-functions/)
 
 ### Installation
