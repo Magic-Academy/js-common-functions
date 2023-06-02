@@ -1,6 +1,6 @@
 {
     "name": "js-common-functions",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
