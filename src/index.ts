@@ -475,3 +475,14 @@ export function windowResize(downCb: Function, upCb: Function): void {
     }
   });
 }
+
+/**
+ * @name: Merge Arrays
+ * @param  {Array} array1 The first array to merge.
+ * @param  {Array} array2 The second array to merge.
+ * @return {Array} The merged array.
+ */
+export function mergeArrays(arr1: Array<any>, arr2: Array<any>): Array<any> {
+  const newArray = [...arr1, ...arr2];
+  return newArray;
+}
