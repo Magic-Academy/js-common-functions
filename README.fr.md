@@ -1,4 +1,4 @@
-# js-common-functions
+# js-fonctions-communes
 
 [![GitHub stars](https://img.shields.io/github/stars/Magic-Academy/js-common-functions)](https://github.com/Magic-Academy/js-common-functions/stargazers)[![GitHub license](https://img.shields.io/github/license/Magic-Academy/js-common-functions)](https://github.com/Magic-Academy/js-common-functions/blob/master/LICENSE)[![Rate on Openbase](https://badges.openbase.io/js/rating/js-common-functions.svg)](https://openbase.io/js/js-common-functions?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/js-common-functions/badge?style=rounded)](https://www.jsdelivr.com/package/npm/js-common-functions)[![NPM](https://nodei.co/npm/js-common-functions.png)](https://nodei.co/npm/js-common-functions/)
 
@@ -17,35 +17,35 @@ console.log(deepClone({a: 1, b: {c: 2}})); // {a: 1, b: {c: 2}}
 
 ```
 
-### Quelques fonctions
+### Certaines fonctions
 
 -   deepClone
--   peu profondClone
+-   Clone peu profond
 -   getObjectLength
 -   format de l'heure
--   Ajax
--   isContain
+-   ajax
+-   estContient
 -   unique
 -   couleur aléatoire
 -   Trier par
 -   code aléatoire
--   checkMot de passe
+-   checkPassword
 -   vérifier le courriel
--   vérifierTéléphone
+-   checkTéléphone
 -   checkIdCard
--   checkCarte Bancaire
+-   chèqueBanqueCarte
 -   checkPhoneSystem
 -   getPhoneAttribution
 -   aller chercher
--   estPC
+-   isPC
 -   garniture
 -   filtreHTML
--   isFloat
+-   estFlottant
 -   estEntier
--   chaîne de requête stringify
+-   stringifyQueryString
 -   getScrollTop
--   fenêtreRedimensionner
+-   redimensionner la fenêtre
 
-En cas de doute, veuillez soumettre[problèmes](https://github.com/Magic-Academy/js-common-functions/issues/new):)
+En cas de doute, veuillez soumettre[questions](https://github.com/Magic-Academy/js-common-functions/issues/new):)
 
-Plus détaillé**documentation**est[**ici**](https://Magic-Academy.github.io/js-common-functions/)
+Plus détaillé**Documentation**est[**ici**](https://Magic-Academy.github.io/js-common-functions/)
